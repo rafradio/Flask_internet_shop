@@ -1,5 +1,6 @@
 homeButton = document.querySelector('.logo');
 menuButtons = document.querySelectorAll('.element');
+bannerButtons = document.querySelectorAll('.item-main-catalog');
 urlPaths = ["/clothes", "/shoes", "/raincoats"]
 
 menuButtons.forEach((item, index) => {
@@ -11,6 +12,14 @@ menuButtons.forEach((item, index) => {
             location.href = fullPath;
         });
     }
+});
+
+bannerButtons.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        newUrl = new URL(window.location.href); 
+        fullPath = new URL("http://" + newUrl.host + urlPaths[index]);
+        location.href = fullPath;
+    });
 });
 
 homeButton.addEventListener('click', () => {
