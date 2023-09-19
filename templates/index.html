@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block title %}Интернет магазин{% endblock %}
+{% block main %}
+    <div class="main-catalog">
+        {% if mainCatalog %}
+            {% for el in mainCatalog %}
+                <div class="item-main-catalog">{{ el }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
+<!-- {% block srciptBlock %}
+    <script src="/static/js/index.js"></script>
+{% endblock %} -->

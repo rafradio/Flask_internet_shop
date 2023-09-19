@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block title %}Одежда{% endblock %}
+{% block main %}
+    <div class="main-catalog">
+        {% if fullCatalog %}
+            {% for el in fullCatalog %}
+                <div class="item-clothes-catalog">{{ el }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
+{% block srciptBlock %}
+    <script src=""></script>
+{% endblock %}
