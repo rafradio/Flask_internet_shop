@@ -23,7 +23,7 @@ def shoes():
 
 @app.route('/raincoats') 
 def raincoats():
-    raincoatElements = ["Обувь"+str(i+1) for i in range(4)]
+    raincoatElements = ["Куртка"+str(i+1) for i in range(4)]
     data = {'fullCatalog': raincoatElements}
     return render_template('raincoats.html', **data)
 
